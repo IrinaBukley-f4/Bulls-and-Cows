@@ -24,6 +24,7 @@ export default [
     },
     rules: {
       ...tsPlugin.configs.recommended.rules,
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       'import/order': [
         'warn',
         {
@@ -35,6 +36,6 @@ export default [
   },
   eslintConfigPrettier,
   {
-    ignores: ['dist/', 'node_modules/', 'eslint.config.js'],
+    ignores: ['dist/', 'node_modules/', 'eslint.config.mjs'],
   },
 ];
