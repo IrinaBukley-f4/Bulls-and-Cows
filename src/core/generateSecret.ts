@@ -1,7 +1,19 @@
 export const generateSecret = (
-  _length: number,
-  _base: number,
-  _random: () => number = Math.random,
+  length: number,
+  base: number,
+  random: () => number = Math.random,
 ): string => {
-  return '';
+  const digits = '0123456789abcdef'.slice(0, base).split('');
+
+  const pick = (pool: string[], acc: string): string => {
+    if (acc.length === length) return acc;
+    const idx = Math.floor(random() * pool.length);
+    const next = pool[idx];
+    return pick(
+      pool.filter((_, i) => i !== idx),
+      acc + next,
+    );
+  };
+
+  return pick(digits, '');
 };
