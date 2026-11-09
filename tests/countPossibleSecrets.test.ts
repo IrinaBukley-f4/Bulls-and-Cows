@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 
-import { countPossibleSecrets, clearMemoCache } from '../src/core/countPossibleSecrets';
+import { countPossibleSecrets, clearMemoCache } from '../src/core/countPossibleSecrets.js';
 
 describe('countPossibleSecrets', () => {
   beforeEach(() => {

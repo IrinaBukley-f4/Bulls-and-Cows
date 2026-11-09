@@ -1,4 +1,4 @@
-import { Base } from '../core/types';
+import { Base } from '../core/types.js';
 
 export interface Attempt {
   guess: string;

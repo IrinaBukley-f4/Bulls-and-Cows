@@ -25,6 +25,7 @@ export default [
     rules: {
       ...tsPlugin.configs.recommended.rules,
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'no-undef': 'off',
       'import/order': [
         'warn',
         {
